@@ -1,0 +1,35 @@
+# URL GLOBAL
+@url = http://dev.local.com:3000/tasks
+
+### GET all
+GET {{url}}/ HTTP/1.1
+
+
+### GET a task
+@id_to_find = 0832418c-4d1a-4a28-99fe-dce28386fc27
+GET {{url}}/{{id_to_find}} HTTP/1.1
+
+
+### POST a task
+POST {{url}}/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "One task",
+  "description": "The description"
+}
+
+
+### PUT a task
+@id_to_edit = 0832418c-4d1a-4a28-99fe-dce28386fc27
+PUT {{url}}/{{id_to_edit}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Finish course"
+}
+
+
+### DELETE a task
+@id_to_remove = 0832418c-4d1a-4a28-99fe-dce28386fc27
+DELETE {{url}}/{{id_to_remove}} HTTP/1.1

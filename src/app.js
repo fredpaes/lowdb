@@ -8,6 +8,6 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 // routes
-app.use(require('./routes/tasks'));
+app.use('/tasks', require('./routes'));
 
 module.exports = app;
